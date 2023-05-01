@@ -9,8 +9,9 @@
 <body>
     <script>
         //JavaScript goes here
-        let playerSelection = getPlayerChoice(); 
-        let computerSelection = getComputerChoice();
+
+        //Calling game() function to play 5 rounds of Rock, Paper, Scissors
+        game();
 
 
         //FUNCTIONS
@@ -72,6 +73,11 @@
             //result variable to store the result of each round
             let result;
             for(let i = 1; i < 6; i++){
+                //Calling the getPlayerChoice and getComputerChoice() at the start of each round
+                let playerSelection = getPlayerChoice();
+                let computerSelection = getComputerChoice();
+
+                //Displaying the results of each round
                 console.log(`Round ${i}:`)
                 result = playRound(playerSelection, computerSelection); 
                 if(result === "WIN"){
@@ -84,6 +90,7 @@
                 }
             }
 
+            //Conditionals for final result
             if(playerScore > computerScore){
                 console.log(`Player wins with a score of ${playerScore} over ${computerScore}`);
             }
