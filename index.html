@@ -17,10 +17,18 @@
         function getComputerChoice(){
             //Generate a number between 1 and 3
             let number = Math.floor((Math.random() * 3) + 1);
-            //Testing to see if the generation works properly
-            console.log(number);
+            //Add conditionals to apply a choice to the computer based on the number generated
+            if(number === 1){
+                return 'ROCK';
+            }
+            else if(number === 2){
+                return 'PAPER';
+            }
+            else if(number === 3){
+                return 'SCISSORS';
+            }
         }
-        getComputerChoice();
+        
         console.log("Hello World!")
     </script>
 </body>
