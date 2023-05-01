@@ -26,11 +26,12 @@
         function getPlayerChoice(){
             let playerChoice = (prompt("Choose Rock, Paper, or Scissors", ''));
             playerChoice = playerChoice.toUpperCase();
+            console.log(`Inside the function we have: ${playerChoice}`)
             if(playerChoice === "ROCK" || playerChoice === "PAPER" || playerChoice === "SCISSORS"){
                 return playerChoice; 
             }
             alert("Wrong input, please choose one of the three. Check your spelling.")
-            getPlayerChoice();
+            return getPlayerChoice();
         }
 
         // getComputerChoice will generate a number between 1 and 3
