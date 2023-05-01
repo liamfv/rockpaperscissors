@@ -9,14 +9,24 @@
 <body>
     <script>
         //JavaScript goes here
-        //Prompt the player for their choice of Rock Paper or Scissors. 
-        let playerChoice = prompt("Choose Rock, Paper, or Scissors", ''); 
-        //Make their choice all uppercase so that our prompt is case insensitive
-        playerChoice = playerChoice.toUpperCase(); 
-        //Testing .toUpperCase() function
-        console.log(playerChoice);
 
-        //FUNCTIONS USED
+
+        //FUNCTIONS
+
+        //getPlayerChoice will prompt the user for their pick of Rock, Paper, or Scissors
+        //and it will uppercase their input in order to make it case insensitive
+        //then it will check if the user entered rock, paper, or scissors and return it
+        //otherwise it will issue an alert about wrong input
+        //and call itself again until the user enters the proper choice
+        function getPlayerChoice(){
+            let playerChoice = (prompt("Choose Rock, Paper, or Scissors", ''));
+            playerChoice = playerChoice.toUpperCase();
+            if(playerChoice === "ROCK" || playerChoice === "PAPER" || playerChoice === "SCISSORS"){
+                return playerChoice; 
+            }
+            alert("Wrong input, please choose one of the three. Check your spelling.")
+            getPlayerChoice();
+        }
 
         // getComputerChoice will generate a number between 1 and 3
         //and depending on the result, it will assign a Rock Paper or Scissors value to it
