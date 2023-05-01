@@ -83,6 +83,19 @@
                     console.log(`Player loses! Score is now Player: ${playerScore}, Computer: ${computerScore}`);
                 }
             }
+
+            if(playerScore > computerScore){
+                console.log(`Player wins with a score of ${playerScore} over ${computerScore}`);
+            }
+            else if(playerScore < computerScore){
+                console.log(`Player loses with a score of ${playerScore} over ${computerScore}`);
+            }
+            else if(playerScore === computerScore){
+                console.log(`Player tied with the computer! Both had a score of ${playerScore}`);
+            }
+            else{
+                console.log("Error. Something must've happened with the scores");
+            }
         }
 
         console.log("Hello World!")
