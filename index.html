@@ -9,11 +9,18 @@
 <body>
     <script>
         //JavaScript goes here
+        //Prompt the player for their choice of Rock Paper or Scissors. 
+        let playerChoice = prompt("Choose Rock, Paper, or Scissors", ''); 
+        //Make their choice all uppercase so that our prompt is case insensitive
+        playerChoice = playerChoice.toUpperCase(); 
+        //Testing .toUpperCase() function
+        console.log(playerChoice);
 
-        /* getComputerChoice will generate a number between 1 and 3
-        and depending on the result, it will assign a Rock Paper or Scissors value to it
-        and then return it. Ex: if it generates 1, it will return Rock.
-        */
+        //FUNCTIONS USED
+
+        // getComputerChoice will generate a number between 1 and 3
+        //and depending on the result, it will assign a Rock Paper or Scissors value to it
+        //and then return it. Ex: if it generates 1, it will return Rock.
         function getComputerChoice(){
             //Generate a number between 1 and 3
             let number = Math.floor((Math.random() * 3) + 1);
@@ -28,9 +35,6 @@
                 return 'SCISSORS';
             }
         }
-        //Testing to see if the function properly returns a choice for the computer player
-        let computerChoice = getComputerChoice();
-        console.log(computerChoice)
 
         console.log("Hello World!")
     </script>
